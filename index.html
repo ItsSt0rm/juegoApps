@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>4/1</title>
     <style type="text/css">
@@ -77,6 +79,24 @@
             float: left;
             margin: 5px;
         }
+
+        @font-face {
+            font-family: "FontAwesome";
+            src: url("fontawesome-webfont.woff");
+        }
+
+        p {
+            font-size: 200%;
+        }
+
+        .icono::before {
+            font-family: "FontAwesome", sans-serif;
+            content: "\f058";
+        }
+
+        .icono-ayuda {
+            margin-right: 20px;
+        }
     </style>
 
     <script>
@@ -150,8 +170,6 @@
         </div>
         <br>
         <br>
-
-        <a href="#">PALABRA</a><br><br>
         <!--Material textarea-->
         <div class="md-form">
             <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
@@ -160,9 +178,21 @@
             <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
         </div>
         <!--Textarea with icon prefix-->
-       
+        <!--Botones de ayuda y eliminar-->
+        <div style="text-align:center;">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
+                        <p class="icono-ayuda"> <i class="fas fa-question"></i> <br>Ayuda</p>
+                    </td>
+                    <td>
+                        <p class="iconos"> <i class="fas fa-trash-alt"></i></i><br>Vaciar</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--Botones de ayuda y eliminar-->
 
-        <a href="#">TECLADO</a><br><br>
     </section>
     <!-- Créditos / Autores -->
     <section id="creditos">
