@@ -3,10 +3,11 @@
 
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>4/1</title>
     <link rel="stylesheet" href="css/animate.css">
+<<<<<<< HEAD
     <script type="text/javascript" src="script.js"></script>
     <style type="text/css">
         section {
@@ -105,6 +106,45 @@
     </style>
 
     
+=======
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        var secciones = [];
+        var tiempo_splash = 2000;
+
+        window.onload = function () {
+            inicializarReferencias();
+            setTimeout(cambiarSplash, tiempo_splash);
+        }
+
+        function inicializarReferencias() {
+            secciones[1] = document.getElementById("seccion_1");
+            secciones[2] = document.getElementById("seccion_2");
+            secciones[3] = document.getElementById("seccion_3");
+            secciones[4] = document.getElementById("seccion_4");
+            secciones[5] = document.getElementById("seccion_5");
+        }
+
+        function cambiarSplash() {
+            secciones[1].className = "splash oculto";
+            secciones[2].className = "home";
+        }
+
+        //https://developer.mozilla.org/es/docs/Web/API/Element/classList
+        //https://www.youtube.com/watch?v=2z0wMNHPbzk
+        function cambiarSeccion(id_seccion) {
+
+            for (var i in secciones) {
+                secciones[i].classList.add("oculto");
+            }
+
+            secciones[id_seccion].classList.add("animated");
+            secciones[id_seccion].classList.add("headShake");
+            secciones[id_seccion].classList.remove("oculto");
+        }
+    </script>
+>>>>>>> bb9173102902a1eb4f14451440c50a09bf15ae5e
 
 </head>
 
