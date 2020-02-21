@@ -4,34 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <title>4/1</title>
+    <link rel="stylesheet" href="css/animate.css">
     <style type="text/css">
         section {
-            width: 720px;
-            height: 1280px;
+            width: 350px;
+            height: 700px;
             text-align: center;
         }
 
-        #splash {
+        .splash {
             background: rgb(127, 129, 129);
         }
 
-        #home {
+        .home {
             background: OrangeRed;
         }
 
-        #juego {
+        .juego {
             background: Violet;
         }
 
-        #instrucciones {
+        .instrucciones {
             background: YellowGreen;
         }
 
-        #creditos {
+        .creditos {
             background: DeepSkyBlue;
         }
 
-        #instrucciones p {
+        .instrucciones p {
             margin: 25px;
             text-align: left;
         }
@@ -77,6 +78,10 @@
             float: left;
             margin: 5px;
         }
+
+        .oculto {
+            display: none;
+        }
     </style>
 
     <script>
@@ -119,24 +124,24 @@
 
 <body>
     <!-- Splash -->
-    <section id="splash">
+    <section id="seccion_1" class="splash">
         <br>
         <h1>Splash del juego</h1>
         <img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
     </section>
     <!-- Home -->
-    <section id="home">
+    <section id="seccion_2" class="home oculto">
         <br>
         <img id='logoprincipal' src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt="">
         <br>
         <br>
         <a class='botonhome' href="#">Jugar</a><br><br>
-        <a class='botonhome' href="#">Instrucciones</a><br><br>
+        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(5)">Instrucciones</a><br><br>
         <a class='botonhome' href="#">Créditos</a><br>
 
     </section>
     <!-- Juego -->
-    <section id="juego">
+    <section id="seccion_3" class="juego oculto">
         <a href="#" class="boton volver">&lt;</a>
         <br>
         <h1>Juego</h1>
@@ -165,7 +170,7 @@
         <a href="#">TECLADO</a><br><br>
     </section>
     <!-- Créditos / Autores -->
-    <section id="creditos">
+    <section id="seccion_4" class="creditos oculto">
         <a href="#" class="boton volver">&lt;</a>
         <br>
         <br>
@@ -182,8 +187,8 @@
         <span>Nombre Estudiante / Ingeniero</span>
     </section>
     <!-- Instrucciones -->
-    <section id="instrucciones">
-        <a href="#" class="boton volver">&lt;</a>
+    <section id="seccion_5" class="instrucciones oculto">
+        <a href="#" onClick="cambiarSeccion(2);" class="boton volver">&lt;</a>
         <h1>Instrucciones</h1>
         <p>
             Instrucciones <br>
