@@ -1,0 +1,93 @@
+section {
+    width: 350px;
+    height: 700px;
+    text-align: center;
+}
+
+.splash {
+    background: rgb(127, 129, 129);
+}
+
+.home {
+    background: OrangeRed;
+}
+
+.juego {
+    background: Violet;
+}
+
+.instrucciones {
+    background: YellowGreen;
+}
+
+.creditos {
+    background: DeepSkyBlue;
+}
+
+.instrucciones p {
+    margin: 25px;
+    text-align: left;
+}
+
+.boton {
+    background-color: Navy;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.volver {
+    margin-left: -300px;
+    line-height: 50px;
+}
+
+.botonhome {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    background-color: #fff;
+    text-decoration: none;
+    width: 300px;
+    height: 100px;
+}
+
+#logoprincipal {
+    width: 500px;
+    height: 500px;
+}
+
+.contenedorimg {
+    overflow: hidden;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagen {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 5px;
+}
+
+.oculto {
+    display: none;
+}
+@font-face {
+    font-family: "FontAwesome";
+    src: url("fontawesome-webfont.woff");
+}
+
+p {
+    font-size: 200%;
+}
+
+.icono::before {
+    font-family: "FontAwesome", sans-serif;
+    content: "\f058";
+}
+
+.icono-ayuda {
+    margin-right: 20px;
+}
