@@ -5,6 +5,7 @@
     window.onload = function () {
         inicializarReferencias();
         setTimeout(cambiarSplash, tiempo_splash);
+        this.alert("Puto");
     }
 
     function inicializarReferencias() {
