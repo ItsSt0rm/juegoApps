@@ -7,12 +7,8 @@
     <meta charset="UTF-8">
     <title>4/1</title>
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/script.js"></script>
-    
-    
-   
-
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -34,9 +30,9 @@
 
         <br>
         <br>
-        <a class='botonhome' href="#">Jugar</a><br><br>
+        <a class='botonhome' href="#" onclick="cambiarSeccion(3)">Jugar</a><br><br>
         <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(5)">Instrucciones</a><br><br>
-        <a class='botonhome' href="#">Créditos</a><br>
+        <a class='botonhome' href="#" onclick="cambiarSeccion(4)">Créditos</a><br>
 
     </section>
     <!-- Juego -->
@@ -46,10 +42,10 @@
         <h1>Juego</h1>
         <br>
         <div class='contenedorimg'>
-            <img class='imagen' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagen' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagen' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagen' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
 
         </div>
         <br>
@@ -80,7 +76,7 @@
     </section>
     <!-- Créditos / Autores -->
     <section id="seccion_4" class="creditos oculto">
-        <a href="#" class="boton volver">&lt;</a>
+        <a href="#" onClick="cambiarSeccion(2)" class = "boton volver">&lt;</a>
         <br>
         <br>
         <h1>Créditos - Estudiantes</h1>

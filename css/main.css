@@ -64,9 +64,9 @@ section {
     margin-right: auto;
 }
 
-.imagen {
-    width: 200px;
-    height: 200px;
+.imagenjuego {
+    width: 150px;
+    height: 150px;
     float: left;
     margin: 5px;
 }
