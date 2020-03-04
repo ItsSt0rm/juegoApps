@@ -1,15 +1,22 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
 section {
     width: 350px;
     height: 700px;
     text-align: center;
+    
 }
 
 .splash {
-    background: rgb(127, 129, 129);
+    
 }
 
 .home {
-    background: OrangeRed;
+    background-image: url("../img/home/textura-inicial.png");
+    background-color: #444CAF;
 }
 
 .juego {
@@ -57,6 +64,17 @@ section {
     height: 100px;
 }
 
+#logosplash{
+    display:block;
+    margin:auto;
+}
+
+#fondosplash{
+    width: 350px;
+    height: 700px;;
+}
+
+
 .contenedorimg {
     overflow: hidden;
     width: 450px;
@@ -90,4 +108,16 @@ p {
 
 .icono-ayuda {
     margin-right: 20px;
+}
+
+#botoncreditos{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    width: 350px;
+}
+
+/* Secciones */
+
+#seccion_4{
+    
 }
