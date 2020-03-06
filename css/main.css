@@ -28,8 +28,14 @@ section {
 }
 
 .creditos {
-    background: DeepSkyBlue;
+    background-image: url("../img/creditos/textura-creditos.png");
+    background-color: #6169C3;
+    font-family: "Monserrat";
+    color: white;
 }
+
+
+
 
 .instrucciones p {
     margin: 25px;
@@ -37,15 +43,19 @@ section {
 }
 
 .boton {
-    background-color: Navy;
-    color: white;
-    padding: 10px;
+    background-image: url("../img/creditos/home.png");
+    padding-bottom: 1px;
+    padding-left: 14px;
+    padding-top: 14px;
+    padding-right: 24px;
     text-decoration: none;
+    
 }
 
 .volver {
-    margin-left: -300px;
-    line-height: 50px;
+    margin-left: -250px;
+    line-height: 100px;
+    z-index: 0;
 }
 
 .botonhome {
@@ -62,6 +72,8 @@ section {
 #logoprincipal {
     width: 100px;
     height: 100px;
+    padding: 50px;
+    padding-left: 70px;
 }
 
 #logosplash{
@@ -111,8 +123,8 @@ p {
 }
 
 #botoncreditos{
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    
+    margin:0px;
     width: 350px;
 }
 
