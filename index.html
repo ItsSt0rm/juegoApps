@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>4/1</title>
     <link rel="stylesheet" href="css/animate.css">
@@ -20,16 +20,16 @@
     <!-- Home -->
     <section id="seccion_2" class="home oculto">
         <br>
-       
-        
+
+
         <div id='logoprincipal'>
             <img src="img/home/logo.png" alt="">
-            
+
         </div>
 
         <br>
         <br>
-        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(3)">Jugar</a><br><br>
+        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(3);cargarNivel();">Jugar</a><br><br>
         <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(5)">Instrucciones</a><br><br>
         <img id="botoncreditos" onclick="cambiarSeccion(4)" src="img/home/boton-creditos.png"></a><br>
 
@@ -37,46 +37,31 @@
     <!-- Juego -->
     <section id="seccion_3" class="juego oculto">
         <a href="#" class="boton volver" onclick="cambiarSeccion(2)"></a>
-        <br>
-        <h1>Juego</h1>
-        <br>
+        <div class="headerjuego">
+            <div id="niveljuego" class="elementojuego">12</div>
+            <div id="monedasjuego" class="elementojuego">50</div>
+        </div>
         <div class='contenedorimg'>
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img id="pista1" class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img id="pista2" class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img id="pista3" class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img id="pista4" class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
 
         </div>
-        <br>
-        <br>
-        <!--Material textarea-->
+        
+        
         <div class="md-form">
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+            
         </div>
-        <!--Textarea with icon prefix-->
-        <!--Botones de ayuda y eliminar-->
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <p class="icono-ayuda"> <i class="fas fa-question"></i> <br>Ayuda</p>
-                    </td>
-                    <td>
-                        <p class="iconos"> <i class="fas fa-trash-alt"></i></i><br>Vaciar</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <!--Botones de ayuda y eliminar-->
+        <div></div>
+        
+        
 
     </section>
     <!-- Créditos / Autores -->
     <section id="seccion_4" class="creditos oculto">
-        <a href="#" onClick="cambiarSeccion(2)" class = "boton volver"> </a>
-        
+        <a href="#" onClick="cambiarSeccion(2)" class="boton volver"> </a>
+
         <h1>CRÉDITOS</h1>
         <br>
         <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png"

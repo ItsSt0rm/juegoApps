@@ -20,7 +20,38 @@ section {
 }
 
 .juego {
-    background: Violet;
+    background-image: url("../img/jugar/textura-nivel1.png");
+    background-color: #959BE8;
+}
+
+.headerjuego{
+    position: relative;
+    padding: 10px;
+    display: inline;
+}
+
+.elementojuego{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#niveljuego{
+    width: 60px;
+    height: 50px;
+    left: 90px;
+    top: -30px;
+    background-image: url("../img/jugar/teclado/adivinanza-numero.png");
+}
+#monedasjuego{
+    width: 51px;
+    height: 51px;
+    left: 230px;
+    top: -15px;
+    background-image: url("../img/jugar/teclado/monedas.png");
+
 }
 
 .instrucciones {
@@ -90,7 +121,7 @@ section {
 .contenedorimg {
     overflow: hidden;
     width: 450px;
-    margin-left: auto;
+    margin-left: 15px;
     margin-right: auto;
 }
 
