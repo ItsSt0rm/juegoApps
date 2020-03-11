@@ -52,6 +52,12 @@ section {
 
 }
 
+.titulojuego{
+    font-family: "Monserrat";
+    font-weight: 30;
+    color: white;
+}
+
 .contenedoranimal{
     position:relative;
     
@@ -62,7 +68,7 @@ section {
     width: 270px;
     height: 50px;
     left: 43px;
-    top: 390px;
+    top: 405px;
     background-image: url("../img/jugar/teclado/rectangulo-normal.png");
 }
 
@@ -71,7 +77,7 @@ section {
     width: 29px;
     height: 29px;
     left: 318px;
-    top: 400px;
+    top: 415px;
     background-image: url("../img/jugar/teclado/eliminar.png");
 }
 
@@ -79,7 +85,7 @@ section {
     position: absolute;
     width: 201px;
     height: 47px;
-    top: 455px;
+    top: 470px;
     left: 70px;
     background-image: url("../img/jugar/teclado/ayuda.png");
 }
