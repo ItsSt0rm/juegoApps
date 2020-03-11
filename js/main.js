@@ -2,6 +2,8 @@
     var secciones = [];
     var tiempo_splash = 2000;
     var imagenes = [];
+    var palabras = [];
+    var letrasImg = [];
     var nivel = 2; //Se obtiene del localstorage
 
     //Imágenes
@@ -18,8 +20,41 @@
     imagenes[11] = "img/jugar/img/sirena3.png";
     imagenes[12] = "img/jugar/img/sirena4.png";
 
+    //Imagen para cada letra
+    letrasImg[0] = "img/jugar/teclado/a.png";
+    letrasImg[1] = "img/jugar/teclado/b.png";
+    letrasImg[2] = "img/jugar/teclado/c.png";
+    letrasImg[3] = "img/jugar/teclado/d.png";
+    letrasImg[4] = "img/jugar/teclado/e.png";
+    letrasImg[5] = "img/jugar/teclado/f.png";
+    letrasImg[6] = "img/jugar/teclado/g.png";
+    letrasImg[7] = "img/jugar/teclado/h.png";
+    letrasImg[8] = "img/jugar/teclado/i.png";
+    letrasImg[9] = "img/jugar/teclado/j.png";
+    letrasImg[10] = "img/jugar/teclado/k.png";
+    letrasImg[11] = "img/jugar/teclado/l.png";
+    letrasImg[12] = "img/jugar/teclado/m.png";
+    letrasImg[13] = "img/jugar/teclado/n.png";
+    letrasImg[14] = "img/jugar/teclado/ñ.png";
+    letrasImg[15] = "img/jugar/teclado/o.png";
+    letrasImg[16] = "img/jugar/teclado/p.png";
+    letrasImg[17] = "img/jugar/teclado/q.png";
+    letrasImg[18] = "img/jugar/teclado/r.png";
+    letrasImg[19] = "img/jugar/teclado/s.png";
+    letrasImg[20] = "img/jugar/teclado/t.png";
+    letrasImg[21] = "img/jugar/teclado/u.png";
+    letrasImg[22] = "img/jugar/teclado/v.png";
+    letrasImg[23] = "img/jugar/teclado/w.png";
+    letrasImg[24] = "img/jugar/teclado/x.png";
+    letrasImg[25] = "img/jugar/teclado/y.png";
+    letrasImg[26] = "img/jugar/teclado/z.png";
 
 
+    //Palabra
+
+    palabras[0] = "unicornio";
+    palabras[1] = "dragon";
+    palabras[2] = "sirena";
 
 
 

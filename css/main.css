@@ -4,15 +4,13 @@ body{
 }
 
 section {
-    width: 350px;
-    height: 700px;
+    width: 360px;
+    height: 720px;
     text-align: center;
     
 }
 
-.splash {
-    
-}
+
 
 .home {
     background-image: url("../img/home/textura-inicial.png");
@@ -41,7 +39,7 @@ section {
 #niveljuego{
     width: 60px;
     height: 50px;
-    left: 90px;
+    left: 82px;
     top: -30px;
     background-image: url("../img/jugar/teclado/adivinanza-numero.png");
 }
@@ -53,6 +51,56 @@ section {
     background-image: url("../img/jugar/teclado/monedas.png");
 
 }
+
+.contenedoranimal{
+    position:relative;
+    
+}
+
+#nombreanimal{
+    position: absolute;
+    width: 270px;
+    height: 50px;
+    left: 43px;
+    top: 390px;
+    background-image: url("../img/jugar/teclado/rectangulo-normal.png");
+}
+
+#borrartodo{
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    left: 318px;
+    top: 400px;
+    background-image: url("../img/jugar/teclado/eliminar.png");
+}
+
+.ayudajuego{
+    position: absolute;
+    width: 201px;
+    height: 47px;
+    top: 455px;
+    left: 70px;
+    background-image: url("../img/jugar/teclado/ayuda.png");
+}
+
+.letrascontenedor{
+    position: absolute;
+    width: 350px;
+    height: 270px;
+    top: 530px;
+    left: 5px;
+}
+
+.letras{
+    float:left;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-image: url("../img/jugar/teclado/b.png");
+}
+
+
 
 .instrucciones {
     background: YellowGreen;
@@ -113,21 +161,21 @@ section {
 }
 
 #fondosplash{
-    width: 350px;
-    height: 700px;;
+    width: 360px;
+    height: 720px;;
 }
 
 
 .contenedorimg {
     overflow: hidden;
-    width: 450px;
-    margin-left: 15px;
+    width: 350px;
+    margin-left: 38px;
     margin-right: auto;
 }
 
 .imagenjuego {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     float: left;
     margin: 5px;
 }
