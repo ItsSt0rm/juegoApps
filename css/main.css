@@ -2,61 +2,36 @@ body{
     padding: 0px;
     margin: 0px;
 }
-
 section {
-    width: 350px;
-    height: 700px;
-    text-align: center;
-    
+    width: 360px;
+    height: 720px;
+    text-align: center; 
 }
-.splash {
-    
-}
-
-.home {
-    background-image: url("../img/home/textura-inicial.png");
-    background-color: #444CAF;
-}
-
 .juego {
     background: Violet;
 }
-
 .instrucciones {
     background: YellowGreen;
 }
 
-.creditos {
-    background-image: url("../img/creditos/textura-creditos.png");
-    background-color: #6169C3;
-    font-family: "Monserrat";
-    color: white;
-}
-
-
-
-
+/*Instrucciones del juego*/
 .instrucciones p {
     margin: 25px;
     text-align: left;
 }
-
 .boton {
     background-image: url("../img/creditos/home.png");
     padding-bottom: 1px;
     padding-left: 14px;
     padding-top: 14px;
     padding-right: 24px;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
-
 .volver {
     margin-left: -250px;
     line-height: 100px;
     z-index: 0;
 }
-
 .botonhome {
     display: inline-block;
     border: 1px solid black;
@@ -67,39 +42,32 @@ section {
     width: 300px;
     height: 100px;
 }
-
 #logoprincipal {
     width: 100px;
     height: 100px;
     padding: 50px;
     padding-left: 70px;
 }
-
 #logosplash{
     display:block;
     margin:auto;
 }
-
 #fondosplash{
     width: 350px;
     height: 700px;;
 }
-
-
 .contenedorimg {
     overflow: hidden;
     width: 450px;
     margin-left: auto;
     margin-right: auto;
 }
-
 .imagenjuego {
     width: 150px;
     height: 150px;
     float: left;
     margin: 5px;
 }
-
 .oculto {
     display: none;
 }
@@ -107,28 +75,101 @@ section {
     font-family: "FontAwesome";
     src: url("fontawesome-webfont.woff");
 }
-
 p {
     font-size: 200%;
 }
-
 .icono::before {
     font-family: "FontAwesome", sans-serif;
     content: "\f058";
 }
-
 .icono-ayuda {
     margin-right: 20px;
 }
-
 #botoncreditos{
-    
     margin:0px;
     width: 350px;
 }
-
 /* Secciones */
 
-#seccion_4{
-    
+/*Section home__________________________________________*/
+.home {
+    background-image: url("../img/home/home.png");
 }
+.jugar-home{
+    position: absolute;
+    top: 327px;
+    width: 360px;
+    height: 90px;
+}
+.ayuda-home{
+    position: absolute;
+    top: 450px;
+    width: 360px;
+    height: 90px;
+}
+.creditos-home{
+    position: absolute;
+    top: 600px;
+    width: 360px;
+    height: 90px;
+}
+
+/*Section instrucciones____________________________________*/
+.instrucciones {
+    background-image: url("../img/home/ayuda.png");
+}
+.volver-instrucciones{
+    position: absolute;
+    top: 25px;
+    width: 58px;
+    height: 35px;
+}
+.jugar-instrucciones{
+    position: absolute;
+    top: 608px;
+    width: 360px;
+    height: 46px;
+}
+
+/*Section creditos________________________________________*/
+.creditos {
+    background-image: url("../img/home/creditos.png");
+}
+
+/*Section moneda 10________________________________________*/
+.money-ten {
+    background-image: url("../img/home/money-ten.png");
+}
+.level-money{
+    position: absolute;
+    top: 0px;
+    width: 50px;
+    height: 47px;
+    margin-left: 153px;
+}
+.level{
+    margin-top: 14px;
+    margin-left: 3px;
+}
+
+/*Section moneda 5________________________________________*/
+.money-five {
+    background-image: url("../img/home/money-five.png");
+}
+.aceptar-money{
+    background-color: red;
+    position: absolute;
+    top:533px;
+    width: 239px;
+    height: 45px;
+    margin-left: 60px;
+}
+.cancelar-money{
+    background-color: red;
+    position: absolute;
+    top: 608px;
+    width: 239px;
+    height: 45px;
+    margin-left: 60px;
+}
+

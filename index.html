@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>4/1</title>
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,23 +18,17 @@
     <section id="seccion_1" class="splash">
         <img id="fondosplash" src="img/splash.png">
     </section>
+    <!-- /Splash -->
+
     <!-- Home -->
     <section id="seccion_2" class="home oculto">
-        <br>
-       
-        
-        <div id='logoprincipal'>
-            <img src="img/home/logo.png" alt="">
-            
-        </div>
-
-        <br>
-        <br>
-        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(3)">Jugar</a><br><br>
-        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(5)">Instrucciones</a><br><br>
-        <img id="botoncreditos" onclick="cambiarSeccion(4)" src="img/home/boton-creditos.png"></a><br>
-
+        <div class="jugar-home" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+        <div class="ayuda-home" href="javascript:void();" onclick="cambiarSeccion(5)"></div>
+        <div class="creditos-home" onclick="cambiarSeccion(6)"></div>
+        <!--4-->
     </section>
+    <!-- /Home -->
+
     <!-- Juego -->
     <section id="seccion_3" class="juego oculto">
         <a href="#" class="boton volver" onclick="cambiarSeccion(2)"></a>
@@ -73,32 +68,39 @@
         <!--Botones de ayuda y eliminar-->
 
     </section>
+    <!-- /Juego -->
+
     <!-- Créditos / Autores -->
     <section id="seccion_4" class="creditos oculto">
-        <a href="#" onClick="cambiarSeccion(2)" class = "boton volver"> </a>
-        
-        <h1>CRÉDITOS</h1>
-        <br>
-        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png"
-            alt="">&nbsp;&nbsp;
-        <span>Nombre Estudiante / Diseñad@r</span> <br>
-        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png"
-            alt="">&nbsp;&nbsp;
-        <span>Nombre Estudiante / Ingeniero</span> <br>
-        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Thor-icon.png"
-            alt="">&nbsp;&nbsp;
-        <span>Nombre Estudiante / Ingeniero</span>
+        <div class="volver-instrucciones" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
+        <div class="jugar-instrucciones" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
     </section>
+    <!-- /Créditos / Autores -->
+
+
     <!-- Instrucciones -->
     <section id="seccion_5" class="instrucciones oculto">
-        <a href="#" onClick="cambiarSeccion(2);" class="boton volver"></a>
-        <h1>Instrucciones</h1>
-        <p>
-            Instrucciones<br>
-
-        </p>
-        <a href="#" class="boton">&lt;</a>&nbsp;&nbsp;<a href="" class="boton">&gt;</a>
+        <div class="volver-instrucciones" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
+        <div class="jugar-instrucciones" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
     </section>
+    <!--/Instrucciones -->
+
+    <!-- Moneda 10 -->
+    <section id="seccion_6" class="money-ten oculto">
+        <div class="volver-instrucciones" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
+        <div class="jugar-instrucciones" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+        <div class="level-money" href="javascript:void();" onclick="cambiarSeccion(3)">
+            <p class="level">10</p>
+        </div>
+    </section>
+    <!-- /Moneda 10 -->
+
+   <!-- Moneda 5 -->
+   <section id="seccion_7" class="money-five oculto">
+    <div class="aceptar-money" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
+    <div class="cancelar-money" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+</section>
+<!--/Moneda de 5 -->
 </body>
 
 </html>
