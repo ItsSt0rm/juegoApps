@@ -90,11 +90,11 @@ section {
     background-image: url("../img/jugar/teclado/ayuda.png");
 }
 
-.letrascontenedor{
+#letrascontenedor{
     position: absolute;
     width: 350px;
     height: 270px;
-    top: 530px;
+    top: 570px;
     left: 5px;
 }
 
@@ -103,7 +103,8 @@ section {
     width: 30px;
     height: 30px;
     margin: 10px;
-    background-image: url("../img/jugar/teclado/b.png");
+    font-size: 0;
+    background-image: url("../img/jugar/teclado/d.png");
 }
 
 
