@@ -41,6 +41,11 @@ section {
     height: 50px;
     left: 82px;
     top: -30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Monserrat";
+    font-size: 160%;
     background-image: url("../img/jugar/teclado/adivinanza-numero.png");
 }
 #monedasjuego{
@@ -48,6 +53,8 @@ section {
     height: 51px;
     left: 230px;
     top: -15px;
+    font-family: "Monserrat";
+    font-size: 120%;
     background-image: url("../img/jugar/teclado/monedas.png");
 
 }
@@ -65,11 +72,29 @@ section {
 
 #nombreanimal{
     position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 50px;
     left: 43px;
     top: 405px;
+    font-size: 150%;
+    font-family: "Monserrat";
+}
+
+.fondoanimalnormal{
     background-image: url("../img/jugar/teclado/rectangulo-normal.png");
+
+}
+
+.fondoanimalcorrecto{
+    background-image: url("../img/jugar/teclado/rectangulo-correcto.png");
+}
+
+.fondoanimalincorrecto{
+    background-image: url("../img/jugar/teclado/rectangulo-incorrecto.png");
+
 }
 
 #borrartodo{
@@ -105,6 +130,14 @@ section {
     margin: 10px;
     font-size: 0;
     background-image: url("../img/jugar/teclado/d.png");
+}
+
+.letraoculta{
+    visibility: hidden;
+}
+
+.letraeliminada{
+    visibility: hidden;
 }
 
 
@@ -191,8 +224,8 @@ section {
     display: none;
 }
 @font-face {
-    font-family: "FontAwesome";
-    src: url("fontawesome-webfont.woff");
+    font-family: "Monserrat";
+    src: url("fonts/montserrat_[allfont.es].ttf");
 }
 
 p {

@@ -6,8 +6,12 @@ var palabras = [];
 var letrasImg = [];
 var letrasOcultas = [];
 var nivel = 2; //Se obtiene del localstorage
+var monedas = 100; //LocalStorage
 var palabraNivel;
 var letrasAleatorias;
+var contenedorAnimal;
+
+var puedeAñadirLetra = true;
 
 
 //Imágenes
@@ -36,6 +40,7 @@ window.onload = function () {
     inicializarReferencias();
     setTimeout(cambiarSplash, tiempo_splash);
     palabraNivel = palabras[nivel];
+    contenedorAnimal = document.getElementById("nombreanimal");
 }
 
 function inicializarReferencias() {
@@ -66,6 +71,10 @@ function cambiarSeccion(id_seccion) {
 
 function cargarNivel() {
     document.getElementById("niveljuego").innerHTML = nivel;
+    document.getElementById("monedasjuego").innerHTML = monedas;
+    contenedorAnimal.innerHTML = null;
+    puedeAñadirLetra = true;
+    contenedorAnimal.className = "fondoanimalnormal";
     cargarImagenes();
     repartirLetras();
 }
@@ -81,28 +90,41 @@ function cargarImagenes() {
 }
 
 function repartirLetras() {
+
     letrasAleatorias = conseguirAleatorias(palabraNivel);
     var letrasNivel = palabraNivel + letrasAleatorias;
     arrayLetras = letrasNivel.split("");
-    //arrayLetras = suffle(arrayLetras);
+    shuffle(arrayLetras);
     var letrasContenedor = document.getElementById("letrascontenedor");
     var salida = "";
     for (var i = 0; i < arrayLetras.length; i++) {
-        salida += '<div id="letra' + i + '" class = "letras">' + arrayLetras[i] + '</div>';
+        salida += '<div id="letra' + i + '" class = "letras" onclick="clickLetra(' + i + ')">' + arrayLetras[i] + '</div>';
     }
 
     letrasContenedor.innerHTML = salida;
     imagenLetra();
 }
 
-function imagenLetra(){ //Le pone a cada letra su imagen correspondiente
-    
-    for (var i = 0; i < 14; i++){
-        var letra = document.getElementById("letra"+i);
-        caracter = letra.innerHTML;
-        letra.innerHTML += '<img src="img/jugar/teclado/'+caracter+'.png" />';
+function shuffle(a) { //Fisher-Yates shuffle
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
     }
-    
+    return a;
+}
+
+function imagenLetra() { //Le pone a cada letra su imagen correspondiente
+
+    for (var i = 0; i < 14; i++) {
+        var letra = document.getElementById("letra" + i);
+        caracter = letra.innerHTML;
+        letra.innerHTML += '<img src="img/jugar/teclado/' + caracter + '.png" />';
+
+    }
+
 }
 
 function conseguirAleatorias(nivelPalabra) { //Devuelve una cadena con letras aleatorias que no están en la palabra del nivel
@@ -121,10 +143,52 @@ function conseguirAleatorias(nivelPalabra) { //Devuelve una cadena con letras al
 
         }
         indice++;
-        
-        
+
+
     }
 
     return stringAleatorio;
+}
 
+function clickLetra(id) {
+    if (puedeAñadirLetra) {
+        var letra = document.getElementById("letra" + id);
+        caracter = letra.innerHTML.substring(0, 1);
+        contenedorAnimal.innerHTML += caracter.toUpperCase();
+        letra.classList.add("letraoculta");
+        letrasOcultas.push(id);
+        verificarPalabra();
+    }
+}
+
+function verificarPalabra() {
+    if (contenedorAnimal.innerHTML.length == palabras[nivel].length) {
+        puedeAñadirLetra = false;
+        var palabra = contenedorAnimal.innerHTML;
+
+        if (palabra.toLowerCase() == palabras[nivel]) {
+            contenedorAnimal.className = "fondoanimalcorrecto";
+
+            console.log("Correcto");
+        } else {
+            contenedorAnimal.className = "fondoanimalincorrecto";
+            console.log("Incorrecto");
+        }
+    }
+}
+
+function ayudaJuego() {
+
+}
+
+function borrarTodo() {
+    puedeAñadirLetra = true;
+    contenedorAnimal.className = "fondoanimalnormal";
+    contenedorAnimal.innerHTML = null;
+    nOcultas = letrasOcultas.length;
+    for (var i = 0; nOcultas; i++) {
+        elementoOculto = letrasOcultas.pop();
+        elemento = document.getElementById("letra" + elementoOculto);
+        elemento.classList.remove("letraoculta");
+    }
 }
