@@ -80,27 +80,78 @@
 
     <!-- Instrucciones -->
     <section id="seccion_5" class="instrucciones oculto">
-        <div class="volver-instrucciones" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
-        <div class="jugar-instrucciones" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+       
+        <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
+            <i class="fas fa-house-damage"></i>
+        </div>
+
+        <div class="game-instrucciones">
+            ¿CÓMO JUGAR?
+        </div>
+        <div class="content-game">
+            <ol>
+                <li value="1">Ver y analizar las cuatro imagenes.</li>
+                <li>Buscar el concepto en común de estas.</li>
+                <li> Buscar las letras en el teclado</li>
+                <li>Si esta palabra es correcta, pasas a la siguiente adivinanza</li>
+                <li>El botón de ayuda te da la posibilidad de eliminar una letra del teclado</li>
+                <li>El botón de borrar te da la posiblidad de volver a escribir las letras</li>
+                </ol> 
+        </div>
+       
+        <!--Boton siguiente-->
+        <div>
+            <div class="siguiente-boton-left"></div>
+            <div class="siguiente-boton-right"></div>
+            <div class="siguiente-jugar" href="javascript:void();" onclick="cambiarSeccion(3)">JUGAR</div>
+        </div>
+        <!--/Boton siguiente-->
     </section>
     <!--/Instrucciones -->
 
     <!-- Moneda 10 -->
     <section id="seccion_6" class="money-ten oculto">
-        <div class="volver-instrucciones" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
-        <div class="jugar-instrucciones" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
-        <div class="level-money" href="javascript:void();" onclick="cambiarSeccion(3)">
-            <p class="level">10</p>
+        <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
+            <i class="fas fa-house-damage"></i>
+        </div>
+        <div class="level">
+            1
+        </div>
+        <div class="circule">
+            <div class="number">
+                10
+            </div>
+            <div class="text-level">
+                MONEDAS
+            </div>
+            <div class="game-text">
+                GANASTE 10 MONEDAS
+            </div>
+
+            <div class="game">
+                ¡FELICITACIONES!
+            </div>
+        </div>
+        <!--Boton siguiente-->
+        <div>
+            <div class="siguiente-boton-left"></div>
+            <div class="siguiente-boton-right"></div>
+            <div class="siguiente-boton" href="javascript:void();" onclick="cambiarSeccion(3)">SIGUIENTE</div>
+        </div>
+        <!--/Boton siguiente-->
         </div>
     </section>
     <!-- /Moneda 10 -->
 
-   <!-- Moneda 5 -->
-   <section id="seccion_7" class="money-five oculto">
-    <div class="aceptar-money" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
-    <div class="cancelar-money" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
-</section>
-<!--/Moneda de 5 -->
+
+
+
+    <!-- Moneda 5 -->
+    <section id="seccion_7" class="money-five oculto">
+        <div class="aceptar-money" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
+        <div class="cancelar-money" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+    </section>
+    <!--/Moneda de 5 -->
 </body>
 
 </html>
