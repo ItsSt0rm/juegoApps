@@ -49,6 +49,8 @@ window.onload = function () {
     if(nivel == undefined) nivel = 1;
     monedas = localStorage.getItem("monedas");
     if(monedas == undefined) monedas = 0;
+    letrasEliminadas = localStorage.getItem("letraseliminados");
+    if(letrasEliminadas == undefined) letrasEliminadas = "";
 }
 
 function inicializarReferencias() {
@@ -190,7 +192,15 @@ function verificarPalabra() {
 }
 
 function ayudaJuego() {
-    
+    var splitAleatorias = letrasAleatorias.split("");
+    for (var i = 0; i < 14; i++){
+        letra = document.getElementById("letra"+i).innerHTML;
+        caracterLetra = letra.substring(0,1);
+        if(caracterLetra.indexOf(splitAleatorias[i]) == -1){
+            letrasEliminadas += caracterLetra;
+            letra.classList.className = "letraeliminada";
+        }
+    }
 }
 
 function borrarTodo() {
