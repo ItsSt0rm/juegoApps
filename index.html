@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>4/1</title>
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -17,29 +18,23 @@
     <section id="seccion_1" class="splash">
         <img id="fondosplash" src="img/splash.png">
     </section>
+    <!-- /Splash -->
+
     <!-- Home -->
     <section id="seccion_2" class="home oculto">
-        <br>
-
-
-        <div id='logoprincipal'>
-            <img src="img/home/logo.png" alt="">
-
-        </div>
-
-        <br>
-        <br>
-        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(3);cargarNivel();">Jugar</a><br><br>
-        <a class='botonhome' href="javascript:void();" onclick="cambiarSeccion(5)">Instrucciones</a><br><br>
-        <img id="botoncreditos" onclick="cambiarSeccion(4)" src="img/home/boton-creditos.png"></a><br>
-
+        <div class="jugar-home" href="javascript:void();" onclick="cambiarSeccion(3); cargarNivel()"></div>
+        <div class="ayuda-home" href="javascript:void();" onclick="cambiarSeccion(5)"></div>
+        <div class="creditos-home" onclick="cambiarSeccion(4)"></div>
+        <!--4-->
     </section>
+    <!-- /Home -->
+
     <!-- Juego -->
     <section id="seccion_3" class="juego oculto">
         <a href="#" class="boton volver" onclick="cambiarSeccion(2)"></a>
         <div class="headerjuego">
-            <div id="niveljuego" class="elementojuego">12</div>
-            <div id="monedasjuego" class="elementojuego">50</div>
+            <div id="niveljuego" class="elementojuego"></div>
+            <div id="monedasjuego" class="elementojuego"></div>
         </div>
         <div class="titulojuego">ADIVINA EL ANIMAL MITOLÓGICO</div>
         <div class='contenedorimg'>
@@ -65,32 +60,154 @@
         
 
     </section>
-    <!-- Créditos / Autores -->
+    <!-- /Juego -->
+
+    <!-- Créditos / Autores ________________________________________________________________________________________________________-->
     <section id="seccion_4" class="creditos oculto">
-        <a href="#" onClick="cambiarSeccion(2)" class="boton volver"> </a>
+        <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
+            <i class="fas fa-house-damage"></i>
+        </div>
+        <div class="game-instrucciones">
+            CREDITOS
+        </div>
+        <div class="table-profile">
 
-        <h1>CRÉDITOS</h1>
-        <br>
-        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png"
-            alt="">&nbsp;&nbsp;
-        <span>Nombre Estudiante / Diseñad@r</span> <br>
-        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png"
-            alt="">&nbsp;&nbsp;
-        <span>Nombre Estudiante / Ingeniero</span> <br>
-        <img src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Thor-icon.png"
-            alt="">&nbsp;&nbsp;
-        <span>Nombre Estudiante / Ingeniero</span>
+            <div class="avatar-emilio">
+                <img src="img/home/creditos.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="info-avatar-emilio">
+                Emilio Martinez
+                <div>
+                    Ingeniero
+                 </div>
+            </div>
+            <div class="avatar-laura">
+                <img src="img/home/creditos.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="info-avatar-laura">
+                Laura Pérez
+                <div>
+                   Diseñadora
+                </div>
+                
+            </div>
+            <div class="avatar-esteban">
+                <img src="img/home/creditos.png" alt="Avatar" class="avatar">
+            </div>
+            <div class="info-avatar-esteban">
+                Esteban Palacio
+                <div>
+                    Ingeniero
+                 </div>
+            </div>
+        <!--Boton siguiente-->
+        <div>
+            <div class="siguiente-boton-left"></div>
+            <div class="siguiente-boton-right"></div>
+            <div class="siguiente-jugar" href="javascript:void();" onclick="cambiarSeccion(3)">JUGAR</div>
+        </div>
+        <!--/Boton siguiente-->
+        </div>
+        <div class="volver-instrucciones" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
+        <div class="jugar-instrucciones" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
     </section>
-    <!-- Instrucciones -->
+    <!-- /Créditos / Autores ________________________________________________________________________________________________________-->
+
+
+    <!-- Instrucciones ________________________________________________________________________________________________________-->
     <section id="seccion_5" class="instrucciones oculto">
-        <a href="#" onClick="cambiarSeccion(2);" class="boton volver"></a>
-        <h1>Instrucciones</h1>
-        <p>
-            Instrucciones <br>
-
-        </p>
-        <a href="#" class="boton">&lt;</a>&nbsp;&nbsp;<a href="" class="boton">&gt;</a>
+        <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
+            <i class="fas fa-house-damage"></i>
+        </div>
+        <div class="game-instrucciones">
+            ¿CÓMO JUGAR?
+        </div>
+        <div class="content-game">
+            <ol>
+                <li class="space-text" value="1">Ver y analizar las cuatro imagenes.</li>
+                <li class="space-text">Buscar el concepto en común de estas.</li>
+                <li class="space-text"> Buscar las letras en el teclado.</li>
+                <li class="space-text">Si esta palabra es correcta, pasas a la siguiente adivinanza.</li>
+                <li class="space-text">El botón de ayuda te da la posibilidad de eliminar una letra del teclado.</li>
+                <li>El botón de borrar te da la posiblidad de volver a escribir las letras.</li>
+            </ol>
+        </div>
+        <!--Boton siguiente-->
+        <div>
+            <div class="siguiente-boton-left"></div>
+            <div class="siguiente-boton-right"></div>
+            <div class="siguiente-jugar" href="javascript:void();" onclick="cambiarSeccion(3)">JUGAR</div>
+        </div>
+        <!--/Boton siguiente-->
     </section>
+    <!--/Instrucciones ________________________________________________________________________________________________________-->
+
+    <!-- Moneda 10 ________________________________________________________________________________________________________-->
+    <section id="seccion_6" class="money-ten oculto">
+        <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
+            <i class="fas fa-house-damage"></i>
+        </div>
+        <div class="level">
+            1
+        </div>
+        <div class="circule">
+            <div class="number">
+                10
+            </div>
+            <div class="text-level">
+                MONEDAS
+            </div>
+            <div class="game-text">
+                GANASTE 10 MONEDAS
+            </div>
+
+            <div class="game">
+                ¡FELICITACIONES!
+            </div>
+        </div>
+        <!--Boton siguiente-->
+        <div>
+            <div class="siguiente-boton-left"></div>
+            <div class="siguiente-boton-right"></div>
+            <div class="siguiente-boton" href="javascript:void();" onclick="cambiarSeccion(3)">SIGUIENTE</div>
+        </div>
+        <!--/Boton siguiente-->
+        </div>
+    </section>
+    <!-- /Moneda 10 ________________________________________________________________________________________________________-->
+
+
+
+
+    <!-- Moneda 5 ________________________________________________________________________________________________________-->
+    <section id="seccion_7" class="money-ten oculto">
+        <div class="circule">
+            <div class="number">
+                5
+            </div>
+            <div class="text-level">
+                MONEDAS
+            </div>
+            <div class="game-text">
+                POR 5 MONEDAS PUEDES ELIMINAR UNA LETRA DEL TECLADO
+            </div>
+        </div>
+        <!--Boton siguiente-->
+        <div>
+            <div class="aceptar-boton-left"></div>
+            <div class="aceptar-boton-right"></div>
+            <div class="aceptar-boton" href="javascript:void();" onclick="cambiarSeccion(3)">ACEPTAR</div>
+        </div>
+
+        <div>
+            <div class="cancelar-boton-left"></div>
+            <div class="cancelar-boton-right"></div>
+            <div class="cancelar-boton" href="javascript:void();" onclick="cambiarSeccion(3)">CANCELAR</div>
+        </div>
+        <!--/Boton siguiente-->
+        </div>
+    </section>
+    <!--/Moneda de 5 ________________________________________________________________________________________________________-->
 </body>
 
 </html>

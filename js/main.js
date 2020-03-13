@@ -46,11 +46,11 @@ window.onload = function () {
     //monedas = localStorage.setItem("monedas", 0);
     //localStorage.clear();
     nivel = localStorage.getItem("nivel");
-    if(nivel == undefined) nivel = 1;
+    if (nivel == undefined) nivel = 1;
     monedas = localStorage.getItem("monedas");
-    if(monedas == undefined) monedas = 0;
+    if (monedas == undefined) monedas = 0;
     letrasEliminadas = localStorage.getItem("letraseliminados");
-    if(letrasEliminadas == undefined) letrasEliminadas = "";
+    if (letrasEliminadas == undefined) letrasEliminadas = "";
 }
 
 function inicializarReferencias() {
@@ -59,6 +59,9 @@ function inicializarReferencias() {
     secciones[3] = document.getElementById("seccion_3");
     secciones[4] = document.getElementById("seccion_4");
     secciones[5] = document.getElementById("seccion_5");
+    secciones[6] = document.getElementById("seccion_6");
+    secciones[7] = document.getElementById("seccion_7");
+       
 }
 
 function cambiarSplash() {
@@ -155,13 +158,11 @@ function conseguirAleatorias(nivelPalabra) { //Devuelve una cadena con letras al
 
         }
         indice++;
-
-
+        
     }
 
     return stringAleatorio;
 }
-
 function clickLetra(id) {
     if (puedeAñadirLetra) {
         var letra = document.getElementById("letra" + id);
@@ -193,10 +194,10 @@ function verificarPalabra() {
 
 function ayudaJuego() {
     var splitAleatorias = letrasAleatorias.split("");
-    for (var i = 0; i < 14; i++){
-        letra = document.getElementById("letra"+i).innerHTML;
-        caracterLetra = letra.substring(0,1);
-        if(caracterLetra.indexOf(splitAleatorias[i]) == -1){
+    for (var i = 0; i < 14; i++) {
+        letra = document.getElementById("letra" + i).innerHTML;
+        caracterLetra = letra.substring(0, 1);
+        if (caracterLetra.indexOf(splitAleatorias[i]) == -1) {
             letrasEliminadas += caracterLetra;
             letra.classList.className = "letraeliminada";
         }
@@ -214,3 +215,4 @@ function borrarTodo() {
         elemento.classList.remove("letraoculta");
     }
 }
+
