@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>4/1</title>
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -22,7 +22,7 @@
 
     <!-- Home -->
     <section id="seccion_2" class="home oculto">
-        <div class="jugar-home" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+        <div class="jugar-home" href="javascript:void();" onclick="cambiarSeccion(3); cargarNivel()"></div>
         <div class="ayuda-home" href="javascript:void();" onclick="cambiarSeccion(5)"></div>
         <div class="creditos-home" onclick="cambiarSeccion(4)"></div>
         <!--4-->
@@ -32,40 +32,32 @@
     <!-- Juego -->
     <section id="seccion_3" class="juego oculto">
         <a href="#" class="boton volver" onclick="cambiarSeccion(2)"></a>
-        <br>
-        <h1>Juego</h1>
-        <br>
+        <div class="headerjuego">
+            <div id="niveljuego" class="elementojuego"></div>
+            <div id="monedasjuego" class="elementojuego"></div>
+        </div>
+        <div class="titulojuego">ADIVINA EL ANIMAL MITOLÓGICO</div>
         <div class='contenedorimg'>
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
-            <img class='imagenjuego' src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt="">
+            <img id="pista1" class='imagenjuego' src="" alt="">
+            <img id="pista2" class='imagenjuego' src="" alt="">
+            <img id="pista3" class='imagenjuego' src="" alt="">
+            <img id="pista4" class='imagenjuego' src="" alt="">
 
         </div>
-        <br>
-        <br>
-        <!--Material textarea-->
-        <div class="md-form">
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
-            <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+        
+        <div class="contenedorrespuesta">
+            <div id="nombreanimal" class = "fondoanimalnormal"></div>
+            <div id="borrartodo" onclick="borrarTodo()"></div>
         </div>
-        <!--Textarea with icon prefix-->
-        <!--Botones de ayuda y eliminar-->
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <p class="icono-ayuda"> <i class="fas fa-question"></i> <br>Ayuda</p>
-                    </td>
-                    <td>
-                        <p class="iconos"> <i class="fas fa-trash-alt"></i></i><br>Vaciar</p>
-                    </td>
-                </tr>
-            </table>
+        <div class="ayudajuego" onclick="ayudaJuego()"></div>
+        <div id="letrascontenedor">
+            <div class="letras"></div>
+            <div class="letras"></div>
+            <div class="letras"></div>
+            
         </div>
-        <!--Botones de ayuda y eliminar-->
+        
+        
 
     </section>
     <!-- /Juego -->
