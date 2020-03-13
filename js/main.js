@@ -3,13 +3,15 @@ var secciones = [];
 var tiempo_splash = 2000;
 var imagenes = [];
 var palabras = [];
-var letrasImg = [];
 var letrasOcultas = [];
-var nivel = 2; //Se obtiene del localstorage
-var monedas = 100; //LocalStorage
+var nivel = 1; //Se obtiene del localstorage
+var monedas = 0; //LocalStorage
+var letrasEliminadas;
 var palabraNivel;
 var letrasAleatorias;
 var contenedorAnimal;
+
+
 
 var puedeAñadirLetra = true;
 
@@ -39,8 +41,14 @@ palabras[3] = "sirena";
 window.onload = function () {
     inicializarReferencias();
     setTimeout(cambiarSplash, tiempo_splash);
-    palabraNivel = palabras[nivel];
     contenedorAnimal = document.getElementById("nombreanimal");
+    //nivel = localStorage.setItem("nivel", 1);
+    //monedas = localStorage.setItem("monedas", 0);
+    //localStorage.clear();
+    nivel = localStorage.getItem("nivel");
+    if(nivel == undefined) nivel = 1;
+    monedas = localStorage.getItem("monedas");
+    if(monedas == undefined) monedas = 0;
 }
 
 function inicializarReferencias() {
@@ -70,6 +78,8 @@ function cambiarSeccion(id_seccion) {
 }
 
 function cargarNivel() {
+    palabraNivel = palabras[nivel];
+    letrasOcultas = [];
     document.getElementById("niveljuego").innerHTML = nivel;
     document.getElementById("monedasjuego").innerHTML = monedas;
     contenedorAnimal.innerHTML = null;
@@ -168,8 +178,10 @@ function verificarPalabra() {
 
         if (palabra.toLowerCase() == palabras[nivel]) {
             contenedorAnimal.className = "fondoanimalcorrecto";
-
-            console.log("Correcto");
+            nuevoNivel = parseInt(nivel) + 1;
+            localStorage.setItem("nivel", nuevoNivel);
+            nuevasMonedas = parseInt(monedas) + 10;
+            localStorage.setItem("monedas", nuevasMonedas);
         } else {
             contenedorAnimal.className = "fondoanimalincorrecto";
             console.log("Incorrecto");
@@ -178,7 +190,7 @@ function verificarPalabra() {
 }
 
 function ayudaJuego() {
-
+    
 }
 
 function borrarTodo() {
