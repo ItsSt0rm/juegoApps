@@ -149,11 +149,62 @@ p {
     color:#ffffff;
     margin-right: 13px;
 }
+.space-text{
+    margin-bottom: 15px;
+}
 
 /*Section creditos________________________________________*/
 .creditos {
-    background-image: url("../img/home/creditos.png");
+    background-image: url("../img/home/fondo-creditos.png");
 }
+.avatar {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .table-profile{
+    position: absolute;
+    top:50px;
+  }
+  .avatar-emilio{
+    position: absolute;
+    top:140px;
+    margin-left: 18px;
+  }
+  .avatar-laura{
+    position: absolute;
+    top:260px;
+    margin-left: 18px;
+  }
+  .avatar-esteban{
+    position: absolute;
+    top:370px;
+    margin-left: 18px;
+  }
+  .info-avatar-emilio{
+    position: absolute;
+    top:140px;
+    margin-left: 140px;
+    font-family: "Helvetica Neue";
+    font-size:20px;
+  }
+  .info-avatar-laura{
+    position: absolute;
+    top:260px;
+    margin-left: 140px;
+    font-family: "Helvetica Neue";
+    font-size:20px;
+  }
+
+  .info-avatar-esteban{
+    position: absolute;
+    top:370px;
+    margin-left: 140px;
+    font-family: "Helvetica Neue";
+    font-size:20px;
+  }
+
 
 /*Section moneda 10________________________________________*/
 .money-ten {
@@ -222,7 +273,7 @@ p {
     background-color: #ffffff ;
     color:#000000;
     border-radius: 15px;
-    border:solid 2px #000000;
+    border:solid 2px #444CAF;
     padding:8px;  
 }
 .siguiente-jugar{
@@ -237,7 +288,7 @@ p {
     background-color: #ffffff ;
     color:#000000;
     border-radius: 15px;
-    border:solid 2px #000000;
+    border:solid 2px #444CAF;
     padding:8px 30px 8px 30px;  
 }
 .siguiente-boton-left{
@@ -248,7 +299,7 @@ p {
     background-color: #ffffff ;
     color:#000000;
     border-radius: 15px;
-    border:solid 2px #000000;
+    border:solid 2px #444CAF;
     margin-left: 81px; 
 }
 .siguiente-boton-right{
@@ -259,7 +310,7 @@ p {
     background-color: #ffffff ;
     color:#000000;
     border-radius: 15px;
-    border:solid 2px #000000;
+    border:solid 2px #444CAF;
     margin-left: 217px; 
 }
 /*Boton siguiente*/
@@ -280,20 +331,84 @@ p {
 .money-five {
     background-image: url("../img/home/money-five.png");
 }
-.aceptar-money{
-    background-color: red;
+/*Boton aceptar*/
+.aceptar-boton{
     position: absolute;
-    top:533px;
-    width: 239px;
-    height: 45px;
-    margin-left: 60px;
-}
-.cancelar-money{
-    background-color: red;
-    position: absolute;
-    top: 608px;
-    width: 239px;
-    height: 45px;
-    margin-left: 60px;
+    top:505px;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Helvetica Neue";
+    color:#ffffff;
+    font-weight: 500;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    padding:8px 18px 8px 18px;  
 }
 
+.aceptar-boton-left{
+    position: absolute;
+    top:517px;
+    width: 50px;
+    height: 47px;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    margin-left: 81px; 
+}
+.aceptar-boton-right{
+    position: absolute;
+    top:517px;
+    width: 50px;
+    height: 47px;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    margin-left: 217px; 
+}
+/*Boton aceptar*/
+
+/*Boton cancelar*/
+.cancelar-boton{
+    position: absolute;
+    top:600px;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Helvetica Neue";
+    color:#ffffff;
+    font-weight: 500;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    padding:8px 8.5px 8px 8.5px;  
+}
+
+.cancelar-boton-left{
+    position: absolute;
+    top:615px;
+    width: 50px;
+    height: 47px;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    margin-left: 81px; 
+}
+.cancelar-boton-right{
+    position: absolute;
+    top:615px;
+    width: 50px;
+    height: 47px;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    margin-left: 217px; 
+}
+/*Boton cancelar*/
