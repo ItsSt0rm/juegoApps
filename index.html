@@ -24,7 +24,7 @@
     <section id="seccion_2" class="home oculto">
         <div class="jugar-home" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
         <div class="ayuda-home" href="javascript:void();" onclick="cambiarSeccion(5)"></div>
-        <div class="creditos-home" onclick="cambiarSeccion(6)"></div>
+        <div class="creditos-home" onclick="cambiarSeccion(7)"></div>
         <!--4-->
     </section>
     <!-- /Home -->
@@ -78,27 +78,24 @@
     <!-- /Créditos / Autores -->
 
 
-    <!-- Instrucciones -->
+    <!-- Instrucciones ________________________________________________________________________________________________________-->
     <section id="seccion_5" class="instrucciones oculto">
-       
         <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
             <i class="fas fa-house-damage"></i>
         </div>
-
         <div class="game-instrucciones">
             ¿CÓMO JUGAR?
         </div>
         <div class="content-game">
             <ol>
-                <li value="1">Ver y analizar las cuatro imagenes.</li>
-                <li>Buscar el concepto en común de estas.</li>
-                <li> Buscar las letras en el teclado</li>
-                <li>Si esta palabra es correcta, pasas a la siguiente adivinanza</li>
-                <li>El botón de ayuda te da la posibilidad de eliminar una letra del teclado</li>
-                <li>El botón de borrar te da la posiblidad de volver a escribir las letras</li>
-                </ol> 
+                <li class="space-text" value="1">Ver y analizar las cuatro imagenes.</li>
+                <li class="space-text">Buscar el concepto en común de estas.</li>
+                <li class="space-text"> Buscar las letras en el teclado.</li>
+                <li class="space-text">Si esta palabra es correcta, pasas a la siguiente adivinanza.</li>
+                <li class="space-text">El botón de ayuda te da la posibilidad de eliminar una letra del teclado.</li>
+                <li>El botón de borrar te da la posiblidad de volver a escribir las letras.</li>
+            </ol>
         </div>
-       
         <!--Boton siguiente-->
         <div>
             <div class="siguiente-boton-left"></div>
@@ -107,9 +104,9 @@
         </div>
         <!--/Boton siguiente-->
     </section>
-    <!--/Instrucciones -->
+    <!--/Instrucciones ________________________________________________________________________________________________________-->
 
-    <!-- Moneda 10 -->
+    <!-- Moneda 10 ________________________________________________________________________________________________________-->
     <section id="seccion_6" class="money-ten oculto">
         <div class="volver-home" href="javascript:void();" onclick="cambiarSeccion(2)">
             <i class="fas fa-house-damage"></i>
@@ -141,17 +138,40 @@
         <!--/Boton siguiente-->
         </div>
     </section>
-    <!-- /Moneda 10 -->
+    <!-- /Moneda 10 ________________________________________________________________________________________________________-->
 
 
 
 
-    <!-- Moneda 5 -->
-    <section id="seccion_7" class="money-five oculto">
-        <div class="aceptar-money" href="javascript:void();" onclick="cambiarSeccion(2)"></div>
-        <div class="cancelar-money" href="javascript:void();" onclick="cambiarSeccion(3)"></div>
+    <!-- Moneda 5 ________________________________________________________________________________________________________-->
+    <section id="seccion_7" class="money-ten oculto">
+        <div class="circule">
+            <div class="number">
+                5
+            </div>
+            <div class="text-level">
+                MONEDAS
+            </div>
+            <div class="game-text">
+                POR 5 MONEDAS PUEDES ELIMINAR UNA LETRA DEL TECLADO
+            </div>
+        </div>
+        <!--Boton siguiente-->
+        <div>
+            <div class="aceptar-boton-left"></div>
+            <div class="aceptar-boton-right"></div>
+            <div class="aceptar-boton" href="javascript:void();" onclick="cambiarSeccion(3)">ACEPTAR</div>
+        </div>
+
+        <div>
+            <div class="cancelar-boton-left"></div>
+            <div class="cancelar-boton-right"></div>
+            <div class="cancelar-boton" href="javascript:void();" onclick="cambiarSeccion(3)">CANCELAR</div>
+        </div>
+        <!--/Boton siguiente-->
+        </div>
     </section>
-    <!--/Moneda de 5 -->
+    <!--/Moneda de 5 ________________________________________________________________________________________________________-->
 </body>
 
 </html>
