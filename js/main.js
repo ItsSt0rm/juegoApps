@@ -45,7 +45,7 @@ window.onload = function () {
     contenedorAnimal = document.getElementById("nombreanimal");
     //nivel = localStorage.setItem("nivel", 1);
     //monedas = localStorage.setItem("monedas", 0);
-    //localStorage.clear();
+    localStorage.clear();
     nivel = localStorage.getItem("nivel");
     if (nivel == undefined) nivel = 1;
     monedas = localStorage.getItem("monedas");

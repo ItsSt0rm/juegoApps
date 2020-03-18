@@ -5,12 +5,8 @@ body{
 section {
     width: 360px;
     height: 720px;
-    text-align: center;
-    
+    text-align: center; 
 }
-
-
-
 .home {
     background-image: url("../img/home/textura-inicial.png");
     background-color: #444CAF;
@@ -20,13 +16,11 @@ section {
     background-image: url("../img/jugar/textura-nivel1.png");
     background-color: #959BE8;
 }
-
 .headerjuego{
     position: relative;
     padding: 10px;
     display: inline;
 }
-
 .elementojuego{
     position:absolute;
     display: flex;
@@ -34,10 +28,9 @@ section {
     align-content: center;
     flex-direction: column;
 }
-
 #niveljuego{
-    width: 60px;
-    height: 50px;
+    width: 68px;
+    height: 48px;
     left: 82px;
     top: -30px;
     display:flex;
@@ -55,20 +48,15 @@ section {
     font-family: "Monserrat";
     font-size: 120%;
     background-image: url("../img/jugar/teclado/monedas.png");
-
 }
-
 .titulojuego{
     font-family: "Monserrat";
     font-weight: 30;
     color: white;
 }
-
 .contenedoranimal{
-    position:relative;
-    
+    position:relative;   
 }
-
 #nombreanimal{
     position: absolute;
     display:flex;
@@ -81,21 +69,15 @@ section {
     font-size: 150%;
     font-family: "Monserrat";
 }
-
 .fondoanimalnormal{
     background-image: url("../img/jugar/teclado/rectangulo-normal.png");
-
 }
-
 .fondoanimalcorrecto{
     background-image: url("../img/jugar/teclado/rectangulo-correcto.png");
 }
-
 .fondoanimalincorrecto{
     background-image: url("../img/jugar/teclado/rectangulo-incorrecto.png");
-
 }
-
 #borrartodo{
     position: absolute;
     width: 29px;
@@ -104,7 +86,6 @@ section {
     top: 415px;
     background-image: url("../img/jugar/teclado/eliminar.png");
 }
-
 .ayudajuego{
     position: absolute;
     width: 201px;
@@ -113,7 +94,6 @@ section {
     left: 70px;
     background-image: url("../img/jugar/teclado/ayuda.png");
 }
-
 #letrascontenedor{
     position: absolute;
     width: 350px;
@@ -121,7 +101,6 @@ section {
     top: 570px;
     left: 5px;
 }
-
 .letras{
     float:left;
     width: 30px;
@@ -130,21 +109,15 @@ section {
     font-size: 0;
     background-image: url("../img/jugar/teclado/d.png");
 }
-
 .letraoculta{
     visibility: hidden;
 }
-
 .letraeliminada{
     visibility: hidden;
 }
-
-
-
 .instrucciones {
     background: YellowGreen;
 }
-
 /*Instrucciones del juego*/
 .instrucciones p {
     margin: 25px;
@@ -244,7 +217,6 @@ p {
     width: 360px;
     height: 90px;
 }
-
 /*Section instrucciones____________________________________*/
 .instrucciones {
     background-image: url("../img/home/fondo-level.png");
@@ -279,11 +251,11 @@ p {
     font-family: "Helvetica Neue";
     color:#ffffff;
     margin-right: 13px;
+    width: 330px;
 }
 .space-text{
     margin-bottom: 15px;
 }
-
 /*Section creditos________________________________________*/
 .creditos {
     background-image: url("../img/home/fondo-creditos.png");
@@ -327,7 +299,6 @@ p {
     font-family: "Helvetica Neue";
     font-size:20px;
   }
-
   .info-avatar-esteban{
     position: absolute;
     top:370px;
@@ -335,6 +306,65 @@ p {
     font-family: "Helvetica Neue";
     font-size:20px;
   }
+  .game-creditos{
+    position: absolute;
+    top:100px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Helvetica Neue";
+    color:#ffffff;
+    font-weight: 500;
+    margin-left: 115px;
+}
+.nombre{
+    color:#ffffff;
+    font-family: "Helvetica Neue";
+    text-align: center;
+}
+.profesion{
+    color:#ffffff;
+    font-style: italic;
+    font-size: 16px;
+}
+/*Boton jugar*/
+.jugar-boton{
+    position: absolute;
+    top:505px;
+    margin-left: 100px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Helvetica Neue";
+    color:#ffffff;
+    font-weight: 500;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    padding:8px 39px 8px 39px;  
+}
+.jugar-boton-left{
+    position: absolute;
+    top:517px;
+    width: 50px;
+    height: 47px;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    margin-left: 81px; 
+}
+.jugar-boton-right{
+    position: absolute;
+    top:517px;
+    width: 50px;
+    height: 47px;
+    background-color: #ffffff ;
+    color:#000000;
+    border-radius: 15px;
+    border:solid 2px #444CAF;
+    margin-left: 217px; 
+}
+/*Boton jugar*/
 
 
 /*Section moneda 10________________________________________*/
@@ -445,19 +475,14 @@ p {
     margin-left: 217px; 
 }
 /*Boton siguiente*/
-
 .volver-home{
     position: absolute;
     top: 10px; 
     color: #ffffff;
     font-size: 30px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: -166px;
+    width: 35px;
 }
- 
-
-
-
 /*Section moneda 5________________________________________*/
 .money-five {
     background-image: url("../img/home/money-five.png");
@@ -478,7 +503,6 @@ p {
     border:solid 2px #444CAF;
     padding:8px 18px 8px 18px;  
 }
-
 .aceptar-boton-left{
     position: absolute;
     top:517px;
@@ -519,7 +543,6 @@ p {
     border:solid 2px #444CAF;
     padding:8px 8.5px 8px 8.5px;  
 }
-
 .cancelar-boton-left{
     position: absolute;
     top:615px;
