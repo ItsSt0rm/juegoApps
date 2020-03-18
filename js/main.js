@@ -10,6 +10,7 @@ var letrasEliminadas;
 var palabraNivel;
 var letrasAleatorias;
 var contenedorAnimal;
+var letrasContenedor;
 
 
 
@@ -61,7 +62,8 @@ function inicializarReferencias() {
     secciones[5] = document.getElementById("seccion_5");
     secciones[6] = document.getElementById("seccion_6");
     secciones[7] = document.getElementById("seccion_7");
-       
+    
+    letrasContenedor  = document.getElementById("letrascontenedor");
 }
 
 function cambiarSplash() {
@@ -83,6 +85,11 @@ function cambiarSeccion(id_seccion) {
 }
 
 function cargarNivel() {
+    nivel = localStorage.getItem("nivel");
+    if (nivel == undefined) nivel = 1;
+    monedas = localStorage.getItem("monedas");
+    if (monedas == undefined) monedas = 0;
+
     palabraNivel = palabras[nivel];
     letrasOcultas = [];
     document.getElementById("niveljuego").innerHTML = nivel;
@@ -110,7 +117,7 @@ function repartirLetras() {
     var letrasNivel = palabraNivel + letrasAleatorias;
     arrayLetras = letrasNivel.split("");
     shuffle(arrayLetras);
-    var letrasContenedor = document.getElementById("letrascontenedor");
+    
     var salida = "";
     for (var i = 0; i < arrayLetras.length; i++) {
         salida += '<div id="letra' + i + '" class = "letras" onclick="clickLetra(' + i + ')">' + arrayLetras[i] + '</div>';
@@ -185,6 +192,8 @@ function verificarPalabra() {
             localStorage.setItem("nivel", nuevoNivel);
             nuevasMonedas = parseInt(monedas) + 10;
             localStorage.setItem("monedas", nuevasMonedas);
+            
+            setTimeout(cambiarSeccion(6), 1500);
         } else {
             contenedorAnimal.className = "fondoanimalincorrecto";
             console.log("Incorrecto");
@@ -193,13 +202,15 @@ function verificarPalabra() {
 }
 
 function ayudaJuego() {
-    var splitAleatorias = letrasAleatorias.split("");
+    //var splitOcultas = letrasOcultas.split("");
     for (var i = 0; i < 14; i++) {
-        letra = document.getElementById("letra" + i).innerHTML;
+        var letra = document.getElementById("letra" + i).innerHTML;
         caracterLetra = letra.substring(0, 1);
-        if (caracterLetra.indexOf(splitAleatorias[i]) == -1) {
+        console.log(caracterLetra);
+        if (letrasEliminadas.indexOf(caracterLetra) == -1) {
             letrasEliminadas += caracterLetra;
             letra.classList.className = "letraeliminada";
+            break;
         }
     }
 }
