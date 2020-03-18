@@ -93,6 +93,7 @@ function cargarNivel() {
     palabraNivel = palabras[nivel];
     letrasOcultas = [];
     document.getElementById("niveljuego").innerHTML = nivel;
+    document.getElementById("niveljuego1").innerHTML = nivel;
     document.getElementById("monedasjuego").innerHTML = monedas;
     contenedorAnimal.innerHTML = null;
     puedeAñadirLetra = true;
