@@ -62,8 +62,8 @@ function inicializarReferencias() {
     secciones[5] = document.getElementById("seccion_5");
     secciones[6] = document.getElementById("seccion_6");
     secciones[7] = document.getElementById("seccion_7");
-    
-    letrasContenedor  = document.getElementById("letrascontenedor");
+
+    letrasContenedor = document.getElementById("letrascontenedor");
 }
 
 function cambiarSplash() {
@@ -118,7 +118,7 @@ function repartirLetras() {
     var letrasNivel = palabraNivel + letrasAleatorias;
     arrayLetras = letrasNivel.split("");
     shuffle(arrayLetras);
-    
+
     var salida = "";
     for (var i = 0; i < arrayLetras.length; i++) {
         salida += '<div id="letra' + i + '" class = "letras" onclick="clickLetra(' + i + ')">' + arrayLetras[i] + '</div>';
@@ -166,7 +166,7 @@ function conseguirAleatorias(nivelPalabra) { //Devuelve una cadena con letras al
 
         }
         indice++;
-        
+
     }
 
     return stringAleatorio;
@@ -188,13 +188,13 @@ function verificarPalabra() {
         var palabra = contenedorAnimal.innerHTML;
 
         if (palabra.toLowerCase() == palabras[nivel]) {
+            letrasEliminadas = "";
             contenedorAnimal.className = "fondoanimalcorrecto";
             nuevoNivel = parseInt(nivel) + 1;
             localStorage.setItem("nivel", nuevoNivel);
             nuevasMonedas = parseInt(monedas) + 10;
             localStorage.setItem("monedas", nuevasMonedas);
-            
-            setTimeout(cambiarSeccion(6), 1500);
+            setTimeout(cambiarPalabra, 800);
         } else {
             contenedorAnimal.className = "fondoanimalincorrecto";
             console.log("Incorrecto");
@@ -202,16 +202,26 @@ function verificarPalabra() {
     }
 }
 
+function cambiarPalabra() {
+    secciones[3].className = "juego oculto";
+    secciones[6].className = "money-ten";
+}
+
+
 function ayudaJuego() {
     //var splitOcultas = letrasOcultas.split("");
     for (var i = 0; i < 14; i++) {
-        var letra = document.getElementById("letra" + i).innerHTML;
-        caracterLetra = letra.substring(0, 1);
+        var letra = document.getElementById("letra" + i);
+        var clasesLetra = letra.className;
+        caracterLetra = letra.innerHTML.substring(0, 1);
+        console.log(letrasAleatorias);
         console.log(caracterLetra);
-        if (letrasEliminadas.indexOf(caracterLetra) == -1) {
-            letrasEliminadas += caracterLetra;
-            letra.classList.className = "letraeliminada";
-            break;
+        if (letrasAleatorias.indexOf(caracterLetra) != -1) {
+            if ((letrasEliminadas.indexOf(caracterLetra) == -1)) {
+                letrasEliminadas += caracterLetra;
+                letra.className = "letraeliminada " + clasesLetra;
+                break;
+            }
         }
     }
 }
@@ -221,7 +231,7 @@ function borrarTodo() {
     contenedorAnimal.className = "fondoanimalnormal";
     contenedorAnimal.innerHTML = null;
     nOcultas = letrasOcultas.length;
-    for (var i = 0; nOcultas; i++) {
+    for (var i = 0; i < nOcultas; i++) {
         elementoOculto = letrasOcultas.pop();
         elemento = document.getElementById("letra" + elementoOculto);
         elemento.classList.remove("letraoculta");
