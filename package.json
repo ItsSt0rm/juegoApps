@@ -1,0 +1,26 @@
+{
+  "name": "juegoapps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsSt0rm/juegoApps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItsSt0rm/juegoApps/issues"
+  },
+  "homepage": "https://github.com/ItsSt0rm/juegoApps#readme",
+  "dependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-uglify": "^4.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^3.0.0"
+  }
+}
